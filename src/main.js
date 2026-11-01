@@ -1,5 +1,5 @@
 import iziToast from 'izitoast';
-import icons from '/img/icons.svg';
+const icons = `${import.meta.env.BASE_URL}icons.svg`;
 
 import { getImagesByQuery } from './js/pixabay-api.js';
 import { clearGallery, createGallery, hideLoader, showLoader } from './js/render-functions.js';
