@@ -1,4 +1,5 @@
 import iziToast from 'izitoast';
+import icons from '/img/icons.svg';
 
 import { getImagesByQuery } from './js/pixabay-api.js';
 import { clearGallery, createGallery, hideLoader, showLoader } from './js/render-functions.js';
@@ -20,7 +21,21 @@ queryForm.addEventListener('submit', (e) => {
       .then(({ hits }) => {
         if (hits.length === 0) {
           iziToast.show({
-            message: 'Sorry, there are no images matching your search query. Please try again!',
+            message: `
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg width="24" height="24" fill="#FFFFFF" style="flex-shrink: 0;">
+                  <use href="${icons}#error-ic"></use>
+                </svg>
+                <span>Sorry, there are no images matching your search query. Please try again!</span>
+              </div>
+            `,
+            position: 'topRight',
+            backgroundColor: '#ef4040',
+            messageColor: '#fafafb',
+            iconColor: '#fafafb',
+            progressBarColor: '#B51B1B',
+            maxWidth: '432px',
+            timeout: 5000,
           });
           return;
         }

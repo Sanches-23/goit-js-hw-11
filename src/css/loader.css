@@ -1,4 +1,5 @@
 .loader {
+  display: flex;
   --color-1: rgba(0, 0, 0, 0.3);
   --color-2: #ff3d00;
   --size: 1.5px;

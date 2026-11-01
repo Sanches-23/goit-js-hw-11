@@ -2,7 +2,11 @@
 
 @import url('./loader.css');
 @import 'izitoast/dist/css/iziToast.min.css';
+@import url('./iziToast-custom.css');
 @import 'simplelightbox/dist/simple-lightbox.min.css';
 
+@import url('./variables.css');
 @import url('./base.css');
 @import url('./container.css');
+@import url('./form.css');
+@import url('./gallery.css');
